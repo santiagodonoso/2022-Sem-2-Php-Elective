@@ -13,5 +13,7 @@
   <nav>
     <a href="/">Home</a>
     <a href="about-us">About us</a>
+    <a href="contact-us">Contact us</a>
+    <a href="create-user">Create user</a>
   </nav>
 
