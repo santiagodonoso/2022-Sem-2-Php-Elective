@@ -19,6 +19,7 @@ require_once __DIR__.'/comp_header.php';
               data-validate="str"
               data-min="<?= _USER_NAME_MIN_LEN ?>"
               data-max="<?= _USER_NAME_MAX_LEN ?>"
+              maxlength="<?= _USER_NAME_MAX_LEN ?>"
       >
     </div>
     <button>
