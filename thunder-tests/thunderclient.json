@@ -44,12 +44,22 @@
     "containerId": "",
     "name": "get item",
     "url": "localhost/api-get-item",
-    "method": "GET",
+    "method": "POST",
     "sortNum": 20000,
     "created": "2022-10-07T07:39:57.184Z",
-    "modified": "2022-10-07T07:42:12.165Z",
+    "modified": "2022-10-07T08:12:15.123Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "item_address",
+          "value": "12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890"
+        }
+      ]
+    },
     "tests": [
       {
         "type": "res-code",
