@@ -15,7 +15,11 @@ require_once __DIR__.'/comp_header.php';
       <label for="">
         User name min <?= _USER_NAME_MIN_LEN ?> max <?= _USER_NAME_MAX_LEN ?> characters
       </label>
-      <input type="text">
+      <input  type="text" 
+              data-validate="str"
+              data-min="<?= _USER_NAME_MIN_LEN ?>"
+              data-max="<?= _USER_NAME_MAX_LEN ?>"
+      >
     </div>
     <button>
       Create user

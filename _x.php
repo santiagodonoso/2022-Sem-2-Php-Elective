@@ -1,7 +1,7 @@
 <?php
 
-define('_USER_NAME_MIN_LEN', 2);
-define('_USER_NAME_MAX_LEN', 50);
+define('_USER_NAME_MIN_LEN', 5);
+define('_USER_NAME_MAX_LEN', 20);
 
 define('_ITEM_ADDRESS_MIN_LEN', 10);
 define('_ITEM_ADDRESS_MAX_LEN', 100);
