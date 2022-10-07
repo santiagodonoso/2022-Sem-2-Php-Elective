@@ -10,13 +10,16 @@ require_once __DIR__.'/comp_header.php';
     Create user
   </h1>
 
-  <form>
+  <form onsubmit="return false">
     <div>
       <label for="">
         User name min <?= _USER_NAME_MIN_LEN ?> max <?= _USER_NAME_MAX_LEN ?> characters
       </label>
       <input type="text">
     </div>
+    <button>
+      Create user
+    </button>
   </form>
 
 
