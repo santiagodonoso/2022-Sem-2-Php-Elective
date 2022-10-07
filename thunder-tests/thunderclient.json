@@ -80,5 +80,42 @@
         "value": "address"
       }
     ]
+  },
+  {
+    "_id": "90f603bb-fe15-4532-85bf-7977dc5723fd",
+    "colId": "9a8e9676-4399-4049-87f8-64e71b9972ca",
+    "containerId": "",
+    "name": "create user",
+    "url": "localhost/api-create-user",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-10-07T08:18:29.777Z",
+    "modified": "2022-10-07T08:24:05.908Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "formdata",
+      "raw": "",
+      "form": [
+        {
+          "name": "user_name",
+          "value": "Santiago"
+        }
+      ]
+    },
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      }
+    ]
   }
 ]
