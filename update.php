@@ -1,16 +1,15 @@
 <?php
 try{
   require_once __DIR__.'/db.php';
-  $query = $_db->prepare('DELETE FROM users WHERE user_id = :user_id');
-  $query->bindValue(':user_id', '1');
+  $query = $db->prepare('UPDATE users SET name="X" WHERE id=2');
   $query->execute();
   if( $query->rowCount() == 0 ){
-    echo 'User was not deleted';
+    echo 'User cannot be updated';
     exit();
   }
   // header('Content-Type: application/json');
-  echo "user deleted with id: 1";
+  echo 'User updated successfully';
   exit();   
 }catch(PDOException $ex){
-  echo $ex;
+ echo $ex;
 }
