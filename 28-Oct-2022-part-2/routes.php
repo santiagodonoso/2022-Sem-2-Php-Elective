@@ -16,6 +16,11 @@ get('/test/$word', function($word){
   echo $word;
 });
 
+// APIS
+post('/item', 'apis/create_item');
+
+
+
 // For GET or POST
 // The 404.php which is inside the views folder will be called
 // The 404.php has access to $_GET and $_POST

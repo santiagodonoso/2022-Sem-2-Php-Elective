@@ -1,0 +1,35 @@
+[
+  {
+    "_id": "15dad06d-2664-48f8-8392-95cea12699c1",
+    "colId": "f5105af6-dc67-4690-9304-5aa677d954f2",
+    "containerId": "",
+    "name": "api get all users",
+    "url": "localhost/api-get-all-users.php",
+    "method": "GET",
+    "sortNum": 10000,
+    "created": "2022-10-14T08:25:22.255Z",
+    "modified": "2022-10-14T08:40:44.221Z",
+    "headers": [],
+    "params": [],
+    "tests": [
+      {
+        "type": "res-code",
+        "custom": "",
+        "action": "equal",
+        "value": "200"
+      },
+      {
+        "type": "Content-Type",
+        "custom": "",
+        "action": "equal",
+        "value": "application/json"
+      },
+      {
+        "type": "json-query",
+        "custom": "json.[0].user_id",
+        "action": "istype",
+        "value": "string"
+      }
+    ]
+  }
+]
