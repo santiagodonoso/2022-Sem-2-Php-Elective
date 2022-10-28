@@ -10,6 +10,8 @@ RewriteRule ^item/(\d+)$          views/item.php?id=$1 [NC,L]
 RewriteRule ^item/(\d+)/(\d+)$    views/complex_item.php?year=$1&price=$2 [NC,L]
 #RewriteRule ^search/(\w+)/(\w+)/(\d{1,2})/(\d{1,2})$  view_search.php?from=$1&to=$2&day=$3&month=$4 [NC,L]
 
+RewriteRule ^(\w+)/shoes/(\w+)/(\d+)$  views/products.php?gender=$1&brand=$2&size=$3  
+
 # The company needs this:
 # localhost/male/shoes/adidas/45
 # localhost/male/shoes/nike/42
