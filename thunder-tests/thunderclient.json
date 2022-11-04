@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "9d8badef-a590-4def-a98c-5c6f1d74d162",
+    "colId": "75702da3-e01c-4b96-b2c0-44b04977a057",
+    "containerId": "",
+    "name": "get all users",
+    "url": "",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-11-04T08:19:28.181Z",
+    "modified": "2022-11-04T08:41:32.972Z",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "text",
+      "raw": "SELECT * FROM user",
+      "form": []
+    },
+    "tests": []
+  }
+]
