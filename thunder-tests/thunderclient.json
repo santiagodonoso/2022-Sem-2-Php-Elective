@@ -22,5 +22,53 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "cd11e265-5579-421b-8753-da00da2f06fb",
+    "colId": "75702da3-e01c-4b96-b2c0-44b04977a057",
+    "containerId": "",
+    "name": "create user",
+    "url": "",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-11-04T10:49:01.944Z",
+    "modified": "2022-11-04T10:49:31.898Z",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "text",
+      "raw": "CREATE user SET name = \"X\"",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "f9a1c602-e5cb-4f01-835e-67ea1e3862ee",
+    "colId": "75702da3-e01c-4b96-b2c0-44b04977a057",
+    "containerId": "",
+    "name": "update user",
+    "url": "",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-11-04T10:49:52.751Z",
+    "modified": "2022-11-04T10:52:01.134Z",
+    "headers": [
+      {
+        "name": "Accept",
+        "value": "application/json"
+      }
+    ],
+    "params": [],
+    "body": {
+      "type": "text",
+      "raw": "\nUPDATE  user SET NAME=\"aaaaa\" WHERE id = \"user:hd8gdymfdjf3kiwawe0u\"",
+      "form": []
+    },
+    "tests": []
   }
 ]
