@@ -1,7 +1,11 @@
 <?php
 // ini_set('display_errors', 1);
 require_once __DIR__.'/surrealdb.php';
+?>
 
+<a href="signup.php">Signup</a>
+
+<?php
 try{
 
   $users = json_decode(surrealdb('SELECT * FROM user'), true)[0]['result'];
@@ -18,7 +22,9 @@ try{
         <div><?= $user['created_at'] ?></div>
       <?php } ?>
 
-    
+      <a href="delete-user.php?id=<?= $user['id'] ?>">
+        Delete
+      </a>
 
 
     </div>

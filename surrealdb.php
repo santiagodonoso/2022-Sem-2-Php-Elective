@@ -11,7 +11,7 @@ SurrealDB client
 surreal sql --conn http://localhost:8000 --user root --pass root --ns company --db company --pretty
 */
 
-function surrealdb($query, $lets = [], $host='http://localhost', $port=8000){ 
+function surrealdb($query, $lets = [], $host='http://127.0.0.1', $port=8000){ 
   try{
     // Create secure lets
     $variables = '';
@@ -32,22 +32,26 @@ function surrealdb($query, $lets = [], $host='http://localhost', $port=8000){
       'ns: company',
       'db: company'
     ];
-    $ch = curl_init("$host:$port/sql");
-    curl_setopt($ch, CURLOPT_TIMEOUT, 1); //timeout in seconds
+    $ch = curl_init();
+    // curl_setopt($ch, CURLOPT_URL, "$host:$port/sql");
+    curl_setopt($ch, CURLOPT_URL, "http://127.0.0.1:8000/sql");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Do not output the response automatically on exec
+    curl_setopt($ch, CURLOPT_TIMEOUT, 1); //timeout in seconds
     curl_setopt($ch, CURLOPT_POSTFIELDS, $query);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
     curl_setopt($ch, CURLOPT_USERPWD, 'root:root');
     curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
     $response = curl_exec($ch);
-    if(!$response = curl_exec($ch)){
+    if(!$response){
       throw new Exception('Cannot connect to SurrealDB');
     }
     curl_close($ch);
     $http_code = curl_getinfo($ch, CURLINFO_RESPONSE_CODE) ?? "500"; // MAC maybe comment this out
     if( $http_code != 200){ throw new Exception($response); }// MAC maybe comment this out
     // echo $response;
+    // exit();
     return $response;
+    exit();
   }catch(Exception $ex){
     throw new Exception($ex->getMessage());
   }
