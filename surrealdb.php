@@ -44,7 +44,7 @@ function surrealdb($query, $lets = [], $host='http://localhost', $port=8000){
       throw new Exception('Cannot connect to SurrealDB');
     }
     curl_close($ch);
-    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE) ?? "500"; // MAC maybe comment this out
+    $http_code = curl_getinfo($ch, CURLINFO_RESPONSE_CODE) ?? "500"; // MAC maybe comment this out
     if( $http_code != 200){ throw new Exception($response); }// MAC maybe comment this out
     // echo $response;
     return $response;
