@@ -1,0 +1,36 @@
+[
+  {
+    "_id": "75702da3-e01c-4b96-b2c0-44b04977a057",
+    "colName": "surrealdb",
+    "created": "2022-11-04T08:14:42.673Z",
+    "sortNum": 10000,
+    "folders": [],
+    "settings": {
+      "headers": [
+        {
+          "name": "ns",
+          "value": "company"
+        },
+        {
+          "name": "db",
+          "value": "company"
+        },
+        {
+          "name": "Accept",
+          "value": "application/json"
+        }
+      ],
+      "auth": {
+        "type": "basic",
+        "basic": {
+          "username": "admin",
+          "password": "password"
+        }
+      },
+      "tests": [],
+      "options": {
+        "baseUrl": "http://localhost:8000/sql"
+      }
+    }
+  }
+]
